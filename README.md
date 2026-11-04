@@ -1,23 +1,22 @@
 # STREET
 
-A mobile-first social news and media-sharing front-end prototype.
+A mobile-first social media/news-feed front-end prototype with a premium black glass UI.
 
-## Features
-- Sign up and sign in with a username and password
-- Home feed for image and video posts
-- Create posts using the camera or device gallery
-- Captions, comments, and post search
-- Instagram-inspired bottom navigation
-- Dark black and glass-style interface
+## Included pages
+- **Home:** feed, stories-style user row, photo/video posts, likes and comments
+- **Explore:** search usernames and captions, browse media grid
+- **Create:** camera capture or gallery/file picker for photos and videos
+- **Activity:** recent comments made by the signed-in user
+- **Profile:** display name, bio, profile photo, own posts, saved posts and logout
 
-## Run locally
-Open `index.html` in a modern browser.
+## Run / publish
+Open `index.html` in a modern browser. To publish:
+1. Create a GitHub repository named `STREET`.
+2. Upload `index.html` and `README.md` to the repository root.
+3. Go to **Settings → Pages**.
+4. Select **Deploy from a branch**, branch `main`, folder `/ (root)`, then Save.
 
-## Deploy with GitHub Pages
-1. Create a GitHub repository.
-2. Upload `index.html` to the repository root.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**, choose `main` and `/ (root)`, then save.
+Camera access may require HTTPS, so use GitHub Pages for camera testing.
 
-## Important limitations
-This is a front-end prototype. Accounts are stored in browser local storage, while posts and comments are stored in IndexedDB on the current device/browser. They do not sync between different users or phones. The demo password storage is not secure and must not be used for real accounts. A production version needs a backend, secure authentication, cloud media storage, database rules, moderation, and reporting tools.
+## Important limitation
+This is a complete front-end prototype, not yet a production multi-user social network. Accounts are saved in browser localStorage and posts/media/comments in IndexedDB on the current browser/device. Other users and phones do not share data. Passwords are locally PBKDF2-hashed using Web Crypto, but browser storage is not secure server authentication. A public launch needs a backend, secure sessions, cloud database/media storage, access rules, moderation/reporting, privacy policy and account recovery. Do not reuse a personal password or upload private media.
